@@ -1,0 +1,14 @@
+/*
+  Corrections for the BL logo display in default FluxBB styles
+*/
+
+img.logo {
+  height:72px;
+  padding:0;
+  margin:0;
+}
+
+#brdtitle {
+  text-align:center;
+}
+
