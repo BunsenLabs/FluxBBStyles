@@ -35,7 +35,7 @@
 
 table#forumperms th, table#forumperms td {white-space: normal; width: auto; text-align: center}
 table#forumperms .atcl {text-align: left; width: 15em; white-space: nowrap}
-#adminconsole td.nodefault {background-color: #d59b9b}
+#adminconsole td.nodefault {background-color: #f61f1f;}
 
 /*** User/Ban Search Result Tables ***/
 #users2 th, #bans1 th {text-align: left}

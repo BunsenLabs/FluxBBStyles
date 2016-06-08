@@ -77,18 +77,25 @@
 ----------------------------------------------------------------*/
 
 .pun {
-	font: 68.75%/1.4545em Verdana, Helvetica, Arial, sans-serif;
+	font-family: "Open Sans", sans-serif;
 	line-height: normal;
 	}
 
-.pun table, .pun td, .pun th, .pun input, .pun select, .pun optgroup, .pun textarea, .pun samp, .pun legend {
+.pun table, .pun td, .pun th, .pun input, .pun select, .pun optgroup, .pun samp, .pun legend {
 	font-size: 1em;
-	font-family: verdana, helvetica, arial, sans-serif;
+	font-family: "Open Sans", sans-serif;
 	}
 
+.pun textarea, .pun input[type=text] {
+	font-family: "Ubuntu Mono", monospace;
+	font-size: 110%;
+	line-height: 1.5;
+}
+
 .pun pre, .pun code {
-	font-size: 1.182em;
-	font-family: consolas, monaco, "bitstream vera sans mono", "courier new", courier, monospace
+	font-size: 110%;
+	font-family: "Ubuntu Mono", monospace;
+	line-height: 1.5;
 	}
 
 .pun pre code {
@@ -222,7 +229,6 @@ html, body {
 	}
 
 .pun {
-	max-width: 1070px;
 	width: 95%;
 	margin: 0 auto;
 	padding: 12px 20px;
@@ -252,9 +258,13 @@ html, body {
 	margin-bottom: 12px
 	}
 
-#punindex .blocktable, .pun .blockpost {
+.pun .blockpost {
 	margin-bottom: 6px
 	}
+
+#punindex .blocktable {
+	margin-bottom: 12px;
+}
 
 #postreview .blockpost {
 	margin-bottom: -1px;
@@ -310,12 +320,16 @@ html, body {
 	margin-right: 12px;
 	}
 
+#brdmenu ul {
+	text-align: center;
+}
+
 #brdmenu a:link, #brdmenu a:visited {
 	text-decoration: none
 	}
 
 #brdmenu a:hover, #brdmenu a:active {
-	text-decoration: underline
+	color:#61bbff;
 	}
 
 #brdwelcome .conl {
@@ -379,7 +393,7 @@ html, body {
 	}
 
 .pun .postlink a:hover, .pun .postlink a:active {
-	text-decoration: underline;
+	text-decoration: none;
 	}
 
 #punindex .subscribelink {
@@ -721,7 +735,7 @@ html, body {
 	}
 
 .pun .blockmenu a:hover, .pun .blockmenu a:active {
-	text-decoration: underline
+	text-decoration: none;
 	}
 
 #viewprofile dl {
@@ -761,7 +775,7 @@ html, body {
 	}
 
 .pun .blockpost h2 a:hover, .pun .blockpost h2 a:active {
-	text-decoration: underline;
+	text-decoration: none;
 	}
 
 .pun .blockpost h2 .conr {
@@ -807,7 +821,7 @@ html, body {
 	}
 
 .pun .blockpost dt a:hover, .pun .blockpost dt a:active {
-	text-decoration: underline;
+	text-decoration: none;
 	}
 
 .pun .postright, .pun .postfootright {
@@ -856,7 +870,7 @@ html, body {
 	}
 
 .pun .postfootright a:hover, .pun .postfootright a:active {
-	text-decoration: underline
+	text-decoration: none;
 	}
 
 .pun .codebox {
@@ -978,7 +992,7 @@ COLOUR SCHEME
 ----------------------------------------------------------------*/
 
 body {
-	background: #2a2a2a;
+	background: #222222;
 	color: #d4d4d4;
   text-rendering: optimizeLegibility;
 	}
@@ -988,30 +1002,34 @@ body {
 	}
 
 .pun .box, #adminconsole fieldset th {
-	background-color: #383838
+	background-color: #181818
 	}
 
 .pun td.tc2, .pun td.tc3, .pun td.tcmod, #postpreview, #viewprofile dd, .pun .forminfo,
-#brdfooter #modcontrols, #adminconsole fieldset td, .pun .blockmenu .box, #adstats dd {
-	background-color: #424242
+#brdfooter #modcontrols, .pun .blockmenu .box, #adstats dd {
+	background-color: #222222
 	}
 
 .pun h2, #brdmenu {
-	background-color: #565656;
+	background-color: #282828;
 	color: #d4d4d4
 	}
 
 .pun th {
-	background-color: #484848
+	background-color: #1d1d1d
 	}
 
 .pun legend {
-	color: #f6b620
+	color: #61bbff
 	}
 
-.pun .blockmenu li.isactive a, #posterror li strong {
+#posterror li strong {
 	color: #d4d4d4
 	}
+
+.pun .blockmenu  li.isactive a {
+	color: #da0003;
+}
 
 .pun .usercontent * {
 	background: transparent;
@@ -1019,16 +1037,24 @@ body {
 	}
 
 .pun textarea, .pun input, .pun select {
-	background-color: #2a2a2a;
+	background-color: #222222;
 	color: #d4d4d4;
   border:0;
-  border: 1px solid #565656;
+  border: 1px solid #343434;
   padding: 2px 2px 2px 2px;
   margin:2px;
 	}
 
+textarea:focus, input[type=text]:focus, select:focus {
+	border-color: rgba(97, 187, 255, 0.66);
+}
+input[type=text] {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
 .pun input[type="submit"]:focus {
-  border: 1px solid #f6b620;
+  border: 1px solid #61bbff;
 }
 
 .pun textarea
@@ -1048,19 +1074,19 @@ body {
 ----------------------------------------------------------------*/
 
 .pun .blockpost .box, .pun .postright, .pun .postfootright, .pun .deletemsg {
-	background-color: #383838
+	background-color: #181818
 	}
 
 .pun .postright, .pun .postfootright {
-	border-left-color: #424242
+	border-left-color: #222222
 	}
 
 .pun .postleft, .pun .postfootleft, .pun .blockpost label, .pun .codebox, .pun .quotebox {
-	background-color: #424242
+	background-color: #222222
 	}
 
 .pun .blockpost h2 {
-	background-color: #565656
+	background-color: #282828
 	}
 
 .pun .blockpost h2 span.conr {
@@ -1080,48 +1106,48 @@ body {
 ----------------------------------------------------------------*/
 
 .pun .box {
-	border-color:#565656
+	border-color:#343434;
 	}
 
 .pun td, #brdfooter #modcontrols {
-	border-color: #565656
+	border-color: #343434;
 	}
 
 .pun th {
-	border-color: #484848
+	border-color: #1d1d1d
 	}
 
 .pun fieldset {
-	border-color: #565656
+	border-color: #343434;
 	}
 
 #adminconsole td, #adminconsole th {
-	border-color: #383838
+	border-color: #181818
 	}
 
 .pun .quotebox, .pun .codebox, .pun .forminfo,
 .pun .blockpost label, .pun .deletemsg {
-	border-color: #565656
+	border-color: #343434;
 	}
 
 /* Links
 ----------------------------------------------------------------*/
 
 .pun a:link, .pun a:visited {
-	color: #f6b620;
+	color: #61bbff;
 	text-decoration:none;
 	}
 
 .pun a:hover, .pun a:active, .pun a:focus {
-	color: #ffee40
+	color: #b5dfff
 	}
 
 .pun .postmsg .postimg a:link img, .pun .postmsg .postimg a:visited img {
-	border-color: #f6b620;
+	border-color: #61bbff;
 	}
 
 .pun .postmsg .postimg a:hover img, .pun .postmsg .postimg a:active img, .pun .postmsg .postimg a:focus img {
-	border-color: #ffee40;
+	border-color: #b5dfff;
 	}
 
 .pun h2 a:link, .pun h2 a:visited,
@@ -1131,7 +1157,7 @@ body {
 
 .pun h2 a:hover, .pun h2 a:active,
 #brdmenu a:hover, #brdmenu a:active {
-	color: #d4d4d4
+	color: #61bbff;
 	}
 
 .pun .postreport a:link, .pun .postreport a:visited,
@@ -1156,14 +1182,28 @@ body {
 ----------------------------------------------------------------*/
 
 .pun .icon {
-	border-color: #484848 #404040 #3c3c3c #444444
+	border-color: #3c3c3c #404040 #3c3c3c #444444
 	}
 
 .pun .iredirect .icon {
-	border-color: #383838 #383838 #383838 #383838
+	border-color: #181818 #181818 #181818 #181818
 	}
 
 .pun .inew .icon {
-	border-color: #f6b620 #ecae1f #d09a1b #e1a61d
+	border-color: #61bbff #61bbff #61bbff #61bbff ;
+
+
+
 	}
 
+.buttons input[type=submit] {
+	padding: 4px 4px 4px 4px;
+}
+
+.pun .blockpost h2, .pun .blockform h2, .pun .blocktable h2, .pun .blockmenu h2, .pun .block h2, #punhelp .punwrap h2 {
+	border: 1px solid #343434;
+	border-bottom: 0;
+}
+li.postdelete a:hover, li.postedit a:hover {
+	color: #da0003;
+}
